@@ -1,0 +1,27 @@
+import re
+def solution(new_id):
+    #1.
+    #2.
+    answer = re.sub('[^0-9a-z_.\-]+', '', new_id.lower())
+
+    #3.
+    answer = re.sub('\.\.+','.',answer)
+
+    #4.
+    answer=answer.strip('.')
+
+    #5.
+    if not answer:
+        answer+='a'
+
+    #6.
+    if len(answer) > 15:
+        answer = answer[:15]
+        answer = answer.rstrip('.')
+    #
+    #7.
+    answer += answer[-1] * (3 - len(answer))
+
+
+    # answer = ''.join(answer)
+    return answer
