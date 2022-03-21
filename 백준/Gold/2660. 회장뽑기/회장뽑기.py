@@ -26,8 +26,7 @@ for i in range(1,N+1):
 min_v = min(ans)
 print(min_v, ans.count(min_v))
 
-result = []
+
 for i in range(N):
     if min_v == ans[i]:
-        result.append(i+1)
-print(*result)
+        print(i+1,end=' ')
