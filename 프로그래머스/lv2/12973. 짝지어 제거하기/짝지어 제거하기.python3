@@ -1,0 +1,14 @@
+def solution(s):
+    answer = []
+    for a in s:
+        if answer:
+            if answer[-1] == a:
+                answer.pop()
+            else:
+                answer.append(a)
+        else:
+            answer.append(a)
+    if answer:
+        return 0
+    else:
+        return 1
