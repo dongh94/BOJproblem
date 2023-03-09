@@ -1,4 +1,4 @@
-import sys
+import sys; sys.stdin=open("상어초등학교.txt")
 
 def input():
     return sys.stdin.readline().rstrip()
