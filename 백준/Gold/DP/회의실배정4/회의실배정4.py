@@ -22,7 +22,6 @@ for i in range(1, n):
     for j in range(i):
         if meets[j].e <= meets[i].s:
             t = j + 1
-    print(dp)
     dp[i] = max(dp[i-1], (dp[t-1] if t > 0 else 0) + meets[i].p)
 
 print(dp[n-1])
