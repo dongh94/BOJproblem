@@ -11,11 +11,20 @@ def dfs(dept, cut):
         print(*result)
         return
 
-    for i in range(1, n+1):
-        if not check[i] and cut < i:
+#     for i in range(1, n + 1):
+#         if not check[i] and cut < i:
+#             check[i] = True
+#             result[dept] = i
+#             dfs(dept + 1, i)
+#             check[i] = False
+#
+# dfs(0, 0)
+
+    for i in range(cut, n+1):
+        if not check[i]:
             check[i] = True
             result[dept] = i
-            dfs(dept + 1, i)
+            dfs(dept + 1, i + 1)
             check[i] = False
 
-dfs(0, 0)
+dfs(0, 1)
