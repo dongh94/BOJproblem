@@ -10,7 +10,7 @@ result = 0
 def dfs(k, sum_v):
     global result
 
-    if k == n:기
+    if k == n:
         if sum_v == s:
             result += 1
         return

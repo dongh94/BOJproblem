@@ -12,6 +12,7 @@ def dfs(k, cut):
     global sum_v, result
 
     if sum_v == s and k > 0:
+        print(sum_v)
         result += 1
 
     for i in range(cut, n):
