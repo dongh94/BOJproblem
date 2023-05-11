@@ -1,5 +1,5 @@
 import sys; sys.stdin=open("사다리조작.txt")
-
+sys.setrecursionlimit(1000)
 def check():
     # i번 세로선의 결과가 i번이 나오는지 체크
     for i in range(n):
