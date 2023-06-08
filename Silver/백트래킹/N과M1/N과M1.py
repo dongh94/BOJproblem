@@ -3,7 +3,7 @@ sys.stdin = open("N과M1.txt")
 sys.setrecursionlimit(5000)
 n, m = map(int, sys.stdin.readline().split())
 result = [0] * m
-check = [False] * (n+1)
+used = [False] * (n + 1)
 
 def dfs(dept):
     if dept == m:
@@ -11,10 +11,10 @@ def dfs(dept):
         return
 
     for i in range(1, n+1):
-        if not check[i]:
+        if not used[i]:
             result[dept] = i
-            check[i] = True
+            used[i] = True
             dfs(dept + 1)
-            check[i] = False
+            used[i] = False
 
 dfs(0)

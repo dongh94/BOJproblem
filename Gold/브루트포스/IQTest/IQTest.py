@@ -21,13 +21,13 @@ input = sys.stdin.readline
 #
 #     for a in range(-100, 100):
 #         for b in range(-100, 100):
-#             check = 0
+#             used = 0
 #             for i in range(n-1):
 #                 if cnt > n-1:
 #                     return 'A'
 #                 if -100 <= abs(arr[i] * a + b) <= 100 and arr[i+1] == arr[i] * a + b:
-#                     check += 1
-#                 if check == n-1:
+#                     used += 1
+#                 if used == n-1:
 #                     cnt += 1
 #                     res = calc(a, b)
 #

@@ -12,7 +12,7 @@ def isSosu(n):
 check = [False, False] + [True] * (N-1)
 def isSosu2(n):
     '''
-    2배 부터 시작해서 자기만큼의 거리를 이미 check[n] = False
+    2배 부터 시작해서 자기만큼의 거리를 이미 used[n] = False
     '''
     for i in range(2 * n, N+1, n):
         check[i] = False
